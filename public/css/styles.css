@@ -26,11 +26,9 @@ h3{
 h6{
   margin-top: 15%;
   color: #79797d;
-  /* somthing */
 }
 
 .sign-up-form{
-  /* margin-top: 10px; */
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -46,22 +44,10 @@ h6{
   margin: auto;
 }
 
-.top{
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.middle{
-  border-radius: 0;
-}
-.bottom{
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
 .btn-sample { 
-  color: #FFFFFF; 
-  background-color: #517D6A; 
-  border-color: #FFFFFF; 
+  color: #FFFFFF !important; 
+  background-color: #517D6A !important;  
+  border-color: #FFFFFF !important; 
 } 
  
 .btn-sample:hover, 
@@ -69,15 +55,15 @@ h6{
 .btn-sample:active, 
 .btn-sample.active, 
 .open .dropdown-toggle.btn-sample { 
-  color: #FFFFFF; 
-  background-color: #3c5d4f; 
-  border-color: #FFFFFF; 
+  color: #FFFFFF !important; 
+  background-color: #3c5d4f !important; 
+  border-color: #FFFFFF !important; 
 } 
  
 .btn-sample:active, 
 .btn-sample.active, 
 .open .dropdown-toggle.btn-sample { 
-  background-image: none; 
+  background-image: none !important; 
 } 
  
 .btn-sample.disabled, 
@@ -95,11 +81,11 @@ fieldset[disabled] .btn-sample:active,
 .btn-sample.disabled.active, 
 .btn-sample[disabled].active, 
 fieldset[disabled] .btn-sample.active { 
-  background-color: #517D6A; 
-  border-color: #FFFFFF; 
+  background-color: #517D6A !important; 
+  border-color: #FFFFFF !important; 
 } 
  
 .btn-sample .badge { 
-  color: #517D6A; 
-  background-color: #FFFFFF; 
+  color: #517D6A !important; 
+  background-color: #FFFFFF !important; 
 }
