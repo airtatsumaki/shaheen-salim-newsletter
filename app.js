@@ -26,14 +26,14 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-  const email = req.body.emailAdd;
-  console.log(email);
+  const { fname, lname, phoneNumber, email } = req.body;
   const newSub = {
     email_address: email,
     status: "subscribed",
     merge_fields: {
-      FNAME: "sub",
-      LNAME: "scriber"
+      FNAME: fname,
+      LNAME: lname,
+      PHONE: phoneNumber
     }
   };
   const subscriberHash = md5(email.toLowerCase());

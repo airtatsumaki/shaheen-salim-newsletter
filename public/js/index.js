@@ -1,6 +1,7 @@
 var formData = {
-  name: "",
-  phoneNumber: 0,
+  fname: "",
+  lname: "",
+  phoneNumber: "",
   email: ""
 };
 
@@ -19,16 +20,16 @@ function checkFormData(){
     $("#signup").addClass("disabled");
 }
 
-$("#name").on("keyup", function() {
-  formData['name'] = $.trim($(this).val());
+$("#fname").on("keyup", function() {
+  formData['fname'] = $.trim($(this).val());
+  checkFormData();
+});
+$("#lname").on("keyup", function() {
+  formData['lname'] = $.trim($(this).val());
   checkFormData();
 });
 $("#phoneNumber").on("keyup", function() {
-  // console.log($(this).val());
-  if(!$(this).val())
-    formData['phoneNumber'] = 0;
-  else
-    formData['phoneNumber'] = $.trim($(this).val());
+  formData['phoneNumber'] = $.trim($(this).val());
   checkFormData();
 });
 $("#email").on("keyup", function() {
