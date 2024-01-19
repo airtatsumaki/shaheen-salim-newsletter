@@ -40,10 +40,16 @@ app.post("/", async (req, res) => {
   try{
     //check is subscriber
     const response = await mailchimp.lists.getListMember(listID, subscriberHash);
-    if(response){
+    if(response && response.status == "subscribed"){
       res.redirect("/subscriber");
-    } else {
-      res.redirect("/failure");
+    } 
+    else if(response && response.status == "unsubscribed"){
+      const responseAdd = await mailchimp.lists.updateListMember(listID, subscriberHash, newSub);
+      if(responseAdd){
+        res.redirect("/success");
+      } else {
+        res.redirect("/failure");
+      }
     }
   } catch(error){
     // is not a subscriber, so subscribe them
