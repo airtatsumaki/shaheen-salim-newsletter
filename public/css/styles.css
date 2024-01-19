@@ -89,3 +89,7 @@ fieldset[disabled] .btn-sample.active {
   color: #517D6A !important; 
   background-color: #FFFFFF !important; 
 }
+
+.form-control{
+  margin-bottom: 0.3em;  
+}

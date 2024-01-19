@@ -20,7 +20,7 @@ app.get("/", async (req, res) => {
     const response = await mailchimp.ping.get();
     console.log(response);
   } catch (error){
-    console.log("error");
+    console.log(error);
   }
   res.render("pages/signup");
 });
